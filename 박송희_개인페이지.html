@@ -1,0 +1,2002 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>박송희</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.highlight-default_background {
+	color: rgba(50, 48, 44, 1);
+}
+.highlight-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.highlight-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(115, 114, 110, 1);
+	fill: rgba(115, 114, 110, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(205, 60, 58, 1);
+	fill: rgba(205, 60, 58, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(248, 248, 247, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(248, 243, 252, 1);
+}
+.block-color-pink_background {
+	background: rgba(252, 241, 246, 1);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: undefined; }
+.select-value-color-pink { background-color: rgba(225, 136, 179, 0.27); }
+.select-value-color-purple { background-color: rgba(168, 129, 197, 0.27); }
+.select-value-color-green { background-color: rgba(123, 183, 129, 0.27); }
+.select-value-color-gray { background-color: rgba(84, 72, 49, 0.15); }
+.select-value-color-translucentGray { background-color: undefined; }
+.select-value-color-orange { background-color: rgba(224, 124, 57, 0.27); }
+.select-value-color-brown { background-color: rgba(210, 162, 141, 0.35); }
+.select-value-color-red { background-color: rgba(244, 171, 159, 0.4); }
+.select-value-color-yellow { background-color: rgba(236, 191, 66, 0.39); }
+.select-value-color-blue { background-color: rgba(93, 165, 206, 0.27); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="13dff1bf-efa9-8099-9e17-c88583155238" class="page sans"><header><h1 class="page-title">박송희</h1><p class="page-description"></p></header><div class="page-body"><p id="cd474e34-f3ac-4f4a-b84f-40f7f5459156" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.875em;line-height:1.3;margin:0">Down</summary><div class="indented"><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">폰 들고 내려가기 (SVM)</summary><div class="indented"><figure id="9cc7a14b-6e73-479d-8a7c-b9d3c883404b" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image.png"><img style="width:363.9895935058594px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image.png"/></a></figure><p id="6710fe15-5338-4f60-bb00-2b36430e59e7" class="">
+</p><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="4652ef6b-8588-49f7-8606-e07f0ba90f3c" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - SVM
+						precision  recall   f1-score   support
+       0       0.45      0.42      0.43       358
+       1       0.41      0.43      0.42       400
+       2       0.32      0.35      0.34       401
+       3       0.18      0.11      0.14       388
+       4       0.24      0.17      0.20       390
+       5       0.36      0.50      0.42       394
+       6       0.55      0.60      0.57       370
+       7       0.37      0.22      0.27       409
+       8       0.51      0.53      0.52       361
+       9       0.30      0.43      0.35       597
+      10       0.34      0.63      0.44       638
+      11       0.53      0.46      0.49       629
+      12       0.64      0.38      0.47       325
+      13       0.62      0.51      0.56       341
+      14       0.58      0.29      0.38       325
+      15       0.32      0.17      0.22       324
+
+accuracy                           0.40      6650
+macro avg       0.42      0.39     0.39      6650
+weighted avg    0.41      0.40     0.39      6650</code></pre></div></details><p id="950d768f-bbc5-40ca-9440-7dbe8201b02e" class="">손 흔들면서 가는거는 accuracy가 매우 낮음</p><p id="a9a736bf-5b4e-4e05-b583-3c471b0522be" class="">특히 3번, 4번, 15번이 심하게 낮음..</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">바지에 넣고 내려가기(SVM)</summary><div class="indented"><figure id="a9d00d3a-4ebf-46f9-b755-2b2f873f3ff8" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%201.png"><img style="width:363.9895935058594px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%201.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6ec727b8-f12d-4737-9c4c-fd0c012823ba" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - SVM
+						precision    recall  f1-score   support
+       0       0.81      0.85      0.83       351
+       1       0.79      0.89      0.84       399
+       2       0.98      0.95      0.97       395
+       3       0.45      0.47      0.46       386
+       4       0.45      0.43      0.44       393
+       5       0.65      0.83      0.73       389
+       6       0.95      0.99      0.97       373
+       7       0.78      0.72      0.75       390
+       8       0.82      0.59      0.69       381
+       9       0.71      0.54      0.61       549
+      10       0.49      0.64      0.56       631
+      11       0.58      0.56      0.57       647
+      12       0.81      0.95      0.88       316
+      13       0.85      0.67      0.75       338
+      14       0.82      0.83      0.82       316
+      15       0.94      0.78      0.86       325
+
+accuracy                           0.71      6579
+macro avg       0.74      0.73     0.73      6579
+weighted avg    0.72      0.71     0.71      6579
+</code></pre></div></details><p id="b272f846-900c-4936-a435-7251d5d8ea0c" class="">4번, 10번, 11번</p><p id="977b18b9-6479-4a1f-b0cb-ed39126dc67d" class="">4번은 3번으로 예측??</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">폰 보면서 (SVM)</summary><div class="indented"><figure id="64bd657d-4f31-4e67-ac60-4b20ed031f4a" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%202.png"><img style="width:362.32293701171875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%202.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="6a6fd4a2-5520-422e-ac55-acc539997b62" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - SVM
+						precision    recall  f1-score   support
+       0       0.70      0.88      0.78       358
+       1       0.64      0.80      0.71       400
+       2       0.99      0.99      0.99       400
+       3       0.41      0.46      0.44       385
+       4       0.40      0.36      0.38       394
+       5       0.57      0.69      0.63       384
+       6       0.98      0.99      0.99       372
+       7       0.77      0.59      0.67       412
+       8       0.70      0.52      0.59       383
+       9       0.49      0.79      0.60       604
+      10       0.54      0.40      0.46       631
+      11       0.69      0.61      0.64       616
+      12       0.78      0.81      0.79       320
+      13       0.63      0.36      0.46       349
+      14       0.75      0.66      0.70       309
+      15       0.81      0.77      0.79       334
+
+accuracy                           0.66      6651
+macro avg       0.68      0.67     0.66      6651
+weighted avg    0.67      0.66     0.65      6651</code></pre><p id="3dd5bbd7-6da7-4a9c-9c7d-f29f57f90565" class="">
+</p></div></details><p id="cb846f82-a244-4143-98ab-c9f2adc9dd19" class="">accuracy가 낮아짐</p></div></details><p id="0b3a999e-2ed5-4074-8ca9-008bfb04a19f" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">CNN</summary><div class="indented"><figure id="52540990-d27d-4c68-b7ae-e472da12dd6e" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%203.png"><img style="width:390.32293701171875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%203.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="0f3c44cf-3065-49b5-9394-347c2cdceac8" class="code"><code class="language-Plain Text">Classification Report - CNN
+              precision    recall  f1-score   support
+
+       user1       0.83      0.72      0.77        67
+      user10       0.47      0.45      0.46       120
+      user11       0.51      0.49      0.50       110
+      user12       0.43      0.52      0.47        54
+      user13       0.76      0.63      0.69        65
+      user14       0.81      0.66      0.73        65
+      user15       0.50      0.60      0.55        53
+       user2       0.77      0.69      0.73        58
+       user3       0.66      0.73      0.69        59
+       user4       0.56      0.68      0.61        62
+       user5       0.65      0.80      0.72        76
+       user6       0.64      0.61      0.63        59
+       user7       0.62      0.52      0.57        65
+       user8       0.66      0.56      0.61        59
+       user9       0.51      0.55      0.53       112
+
+    accuracy                           0.60      1084
+   macro avg       0.63      0.61      0.62      1084
+weighted avg       0.61      0.60      0.60      1084</code></pre><p id="daaeddec-c81c-4244-be6a-11b031cf4571" class="">에폭시 100으로 돌렸으나 그닥 좋지는 않은 듯.</p></div></details><p id="ddec9f77-5471-40cd-a6bd-5a5965a37a8b" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">CNN + LSTM</summary><div class="indented"><figure id="1ba9c28b-4553-4ecc-884e-f70d732aecb7" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%204.png"><img style="width:362.32293701171875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%204.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="980a5ec1-5fd8-4a42-ac2e-c5ec6d93b69f" class="code"><code class="language-Plain Text">Classification Report - CNN+LSTM
+              precision    recall  f1-score   support
+
+       user1       0.95      0.85      0.90        67
+       user2       0.75      0.64      0.69       120
+       user3       0.67      0.74      0.70       110
+       user4       0.76      0.70      0.73        54
+       user5       0.82      0.92      0.87        65
+       user6       0.95      0.88      0.91        65
+       user7       0.81      0.79      0.80        53
+       user8       0.84      0.93      0.89        58
+       user9       0.89      0.81      0.85        59
+      user10       0.86      0.90      0.88        62
+      user11       0.83      0.92      0.88        76
+      user12       0.90      0.90      0.90        59
+      user13       0.75      0.82      0.78        65
+      user14       0.91      0.83      0.87        59
+      user15       0.71      0.72      0.72       112
+
+    accuracy                           0.81      1084
+   macro avg       0.83      0.82      0.82      1084
+weighted avg       0.81      0.81      0.81      1084
+
+Model: &quot;sequential&quot;
+_________________________________________________________________
+...
+Total params: 217167 (848.31 KB)
+Trainable params: 217167 (848.31 KB)
+Non-trainable params: 0 (0.00 Byte)</code></pre><ul id="197ff1f3-adf3-4360-9249-856226ce1d5a" class="toggle"><li><details open=""><summary>code</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="8a8f09e4-ace1-4a4f-b987-e62d21abb92f" class="code"><code class="language-Python">import os
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn import svm
+from sklearn.metrics import confusion_matrix, classification_report
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# Set the data path
+data_path = &#x27;C:/Users/thdgm/바탕 화면/프버프로젝트/preprocessed&#x27;
+
+# Load data
+def load_data(data_path):
+    data = []
+    labels = []
+    
+    for folder in os.listdir(data_path):
+        folder_path = os.path.join(data_path, folder)
+        if os.path.isdir(folder_path):
+            # Read accelerometer and gyroscope data
+            acc_path = os.path.join(folder_path, &#x27;Accelerometer.csv&#x27;)
+            gyro_path = os.path.join(folder_path, &#x27;Gyroscope.csv&#x27;)
+            
+            if os.path.exists(acc_path) and os.path.exists(gyro_path):
+                acc_data = pd.read_csv(acc_path)[[&#x27;x&#x27;, &#x27;y&#x27;, &#x27;z&#x27;]].values  # Extract XYZ columns
+                gyro_data = pd.read_csv(gyro_path)[[&#x27;x&#x27;, &#x27;y&#x27;, &#x27;z&#x27;]].values  # Extract XYZ columns
+                
+                # Ensure both data arrays have the same number of rows
+                min_length = min(len(acc_data), len(gyro_data))
+                acc_data = acc_data[:min_length]
+                gyro_data = gyro_data[:min_length]
+                
+                # Concatenate accelerometer and gyroscope data
+                combined_data = np.hstack((acc_data, gyro_data))
+                
+                # Apply sliding window technique to generate more samples
+                window_size = 100
+                step_size = 50
+                for start in range(0, len(combined_data) - window_size + 1, step_size):
+                    window_data = combined_data[start:start + window_size]
+                    data.append(window_data)
+                    labels.append(folder.split(&#x27;_&#x27;)[0])
+    
+    return data, labels
+
+# Prepare the data
+data, labels = load_data(data_path)
+
+# Pad sequences to the same length (if necessary)
+max_length = max([len(d) for d in data])
+data = [np.pad(d, ((0, max_length - len(d)), (0, 0)), &#x27;constant&#x27;) if len(d) &lt; max_length else d for d in data]
+data = np.array(data)
+labels = np.array(labels)
+
+# Encode labels
+label_encoder = LabelEncoder()
+labels_encoded = label_encoder.fit_transform(labels)
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(data, labels_encoded, test_size=0.2, random_state=42)
+
+# Build the CNN+LSTM model
+model_cnn_lstm = tf.keras.models.Sequential([
+    tf.keras.layers.InputLayer(input_shape=(max_length, data.shape[2])),
+    tf.keras.layers.Conv1D(filters=64, kernel_size=3, activation=&#x27;relu&#x27;),
+    tf.keras.layers.MaxPooling1D(pool_size=2),
+    tf.keras.layers.Conv1D(filters=128, kernel_size=3, activation=&#x27;relu&#x27;),
+    tf.keras.layers.MaxPooling1D(pool_size=2),
+    tf.keras.layers.LSTM(128, return_sequences=True),
+    tf.keras.layers.LSTM(64),
+    tf.keras.layers.Dense(128, activation=&#x27;relu&#x27;),
+    tf.keras.layers.Dense(len(label_encoder.classes_), activation=&#x27;softmax&#x27;)
+])
+
+# Compile the model
+model_cnn_lstm.compile(optimizer=&#x27;adam&#x27;, loss=&#x27;sparse_categorical_crossentropy&#x27;, metrics=[&#x27;accuracy&#x27;])
+
+# Train the model
+history_cnn_lstm = model_cnn_lstm.fit(X_train, y_train, epochs=20, batch_size=16, validation_split=0.1)
+
+# Evaluate the model
+y_pred_cnn_lstm = model_cnn_lstm.predict(X_test)
+y_pred_classes_cnn_lstm = np.argmax(y_pred_cnn_lstm, axis=1)
+
+# Create a fixed list of class names in order
+class_names = [f&quot;user{i}&quot; for i in range(1, 16)]
+
+# Confusion matrix for CNN+LSTM with fixed class names
+conf_matrix_cnn_lstm = confusion_matrix(y_test, y_pred_classes_cnn_lstm)
+plt.figure(figsize=(10, 8))
+sns.heatmap(conf_matrix_cnn_lstm, annot=True, cmap=&#x27;Blues&#x27;, xticklabels=class_names, yticklabels=class_names)
+plt.xlabel(&#x27;Predicted&#x27;)
+plt.ylabel(&#x27;True&#x27;)
+plt.title(&#x27;Confusion Matrix - CNN+LSTM&#x27;)
+plt.show()
+
+# Classification report for CNN+LSTM
+print(&quot;Classification Report - CNN+LSTM&quot;)
+print(classification_report(y_test, y_pred_classes_cnn_lstm, target_names=class_names))
+
+# Print model summary to see the number of parameters
+model_cnn_lstm.summary()
+</code></pre><p id="a0622b02-70cf-42b4-9a0a-74f59e25ac74" class="">
+</p><p id="c374a837-b40b-4986-98b5-4a573e5bda46" class=""><br/><br/></p></details></li></ul><p id="2152e0f3-f86e-4f3e-9f9f-fc1dc549cdd0" class="">돌릴 때 마다 값이 달라짐.. 왜지?</p><p id="f8854ef1-a8fb-4904-99bb-5bce5de8e12d" class="">특히, 2번 3번 값이 크게 달라진다.</p><figure id="237865b3-2efb-48bf-b5e1-1d91745e1cea" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%205.png"><img style="width:362.32293701171875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%205.png"/></a></figure></div></details><p id="7801ec38-dbd3-4c27-86b6-b14d120fcbca" class="">
+</p><details open=""><summary style="font-weight:600;font-size:1.5em;line-height:1.3;margin:0">CNN+TRANSFORMER</summary><div class="indented"><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="ae5db871-2ed3-4261-84b2-8231bd42c475" class="code"><code class="language-Python"># Build the CNN+Transformer model
+from tensorflow.keras.layers import LayerNormalization, MultiHeadAttention, Dropout, Dense
+import os
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn import svm
+from sklearn.metrics import confusion_matrix, classification_report
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+class TransformerBlock(tf.keras.layers.Layer):
+    def __init__(self, embed_dim, num_heads, ff_dim, rate=0.1):
+        super(TransformerBlock, self).__init__()
+        self.att = MultiHeadAttention(num_heads=num_heads, key_dim=embed_dim)
+        self.ffn = tf.keras.Sequential([
+            Dense(ff_dim, activation=&quot;relu&quot;),
+            Dense(embed_dim),
+        ])
+        self.layernorm1 = LayerNormalization(epsilon=1e-6)
+        self.layernorm2 = LayerNormalization(epsilon=1e-6)
+        self.dropout1 = Dropout(rate)
+        self.dropout2 = Dropout(rate)
+
+    def call(self, inputs, training):
+        attn_output = self.att(inputs, inputs)
+        attn_output = self.dropout1(attn_output, training=training)
+        out1 = self.layernorm1(inputs + attn_output)
+        ffn_output = self.ffn(out1)
+        ffn_output = self.dropout2(ffn_output, training=training)
+        return self.layernorm2(out1 + ffn_output)
+
+# Model construction
+embed_dim = 128  # Embedding size for each token
+num_heads = 4    # Number of attention heads
+ff_dim = 128     # Hidden layer size in feed-forward network
+
+# Set the data path
+data_path = &#x27;C:/Users/USER/Desktop/프보기/preprocessed&#x27;
+
+# Load data
+def load_data(data_path):
+    data = []
+    labels = []
+    
+    for folder in os.listdir(data_path):
+        folder_path = os.path.join(data_path, folder)
+        if os.path.isdir(folder_path):
+            # Read accelerometer and gyroscope data
+            acc_path = os.path.join(folder_path, &#x27;Accelerometer.csv&#x27;)
+            gyro_path = os.path.join(folder_path, &#x27;Gyroscope.csv&#x27;)
+            
+            if os.path.exists(acc_path) and os.path.exists(gyro_path):
+                acc_data = pd.read_csv(acc_path)[[&#x27;x&#x27;, &#x27;y&#x27;, &#x27;z&#x27;]].values  # Extract XYZ columns
+                gyro_data = pd.read_csv(gyro_path)[[&#x27;x&#x27;, &#x27;y&#x27;, &#x27;z&#x27;]].values  # Extract XYZ columns
+                
+                # Ensure both data arrays have the same number of rows
+                min_length = min(len(acc_data), len(gyro_data))
+                acc_data = acc_data[:min_length]
+                gyro_data = gyro_data[:min_length]
+                
+                # Concatenate accelerometer and gyroscope data
+                combined_data = np.hstack((acc_data, gyro_data))
+                
+                # Apply sliding window technique to generate more samples
+                window_size = 100
+                step_size = 50
+                for start in range(0, len(combined_data) - window_size + 1, step_size):
+                    window_data = combined_data[start:start + window_size]
+                    data.append(window_data)
+                    labels.append(folder.split(&#x27;_&#x27;)[0])
+    
+    return data, labels
+
+# Prepare the data
+data, labels = load_data(data_path)
+
+# Pad sequences to the same length (if necessary)
+max_length = max([len(d) for d in data])
+data = [np.pad(d, ((0, max_length - len(d)), (0, 0)), &#x27;constant&#x27;) if len(d) &lt; max_length else d for d in data]
+data = np.array(data)
+labels = np.array(labels)
+
+# Encode labels
+label_encoder = LabelEncoder()
+labels_encoded = label_encoder.fit_transform(labels)
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(data, labels_encoded, test_size=0.2, random_state=42)
+
+model_cnn_transformer = tf.keras.models.Sequential([
+    tf.keras.layers.InputLayer(input_shape=(max_length, data.shape[2])),
+    tf.keras.layers.Conv1D(filters=128, kernel_size=3, activation=&#x27;relu&#x27;),
+    tf.keras.layers.MaxPooling1D(pool_size=3),
+    tf.keras.layers.Conv1D(filters=128, kernel_size=3, activation=&#x27;relu&#x27;),
+    tf.keras.layers.MaxPooling1D(pool_size=3),
+    TransformerBlock(embed_dim=128, num_heads=num_heads, ff_dim=ff_dim),
+    tf.keras.layers.GlobalAveragePooling1D(),
+    tf.keras.layers.Dense(128, activation=&#x27;relu&#x27;),
+    tf.keras.layers.Dropout(0.2),
+    tf.keras.layers.Dense(len(label_encoder.classes_), activation=&#x27;softmax&#x27;)
+])
+
+# Compile the model
+model_cnn_transformer.compile(optimizer=&#x27;adam&#x27;, loss=&#x27;sparse_categorical_crossentropy&#x27;, metrics=[&#x27;accuracy&#x27;])
+
+# Train the model
+history_cnn_transformer = model_cnn_transformer.fit(X_train, y_train, epochs=50, batch_size=16, validation_split=0.1)
+
+# Evaluate the model
+y_pred_cnn_transformer = model_cnn_transformer.predict(X_test)
+y_pred_classes_cnn_transformer = np.argmax(y_pred_cnn_transformer, axis=1)
+
+# Confusion matrix for CNN+Transformer with fixed class names
+conf_matrix_cnn_transformer = confusion_matrix(y_test, y_pred_classes_cnn_transformer)
+plt.figure(figsize=(10, 8))
+sns.heatmap(conf_matrix_cnn_transformer, annot=True, cmap=&#x27;Blues&#x27;, xticklabels=label_encoder.classes_, yticklabels=label_encoder.classes_)
+plt.xlabel(&#x27;Predicted&#x27;)
+plt.ylabel(&#x27;True&#x27;)
+plt.title(&#x27;Confusion Matrix - CNN+Transformer&#x27;)
+plt.show()
+
+# Classification report for CNN+Transformer
+print(&quot;Classification Report - CNN+Transformer&quot;)
+print(classification_report(y_test, y_pred_classes_cnn_transformer, target_names=label_encoder.classes_))
+
+# Print model summary to see the number of parameters
+model_cnn_transformer.summary()</code></pre><p id="601802cc-790d-4e3b-846d-0088674d4e75" class="">성능도 좋고, 속도가 빨라서 이것을 이용할 것임<br/><br/></p><figure id="6241a3b2-926d-4993-a059-2e6a6c4283e2" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%206.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%206.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fe3eceda-3efd-4434-b5f6-4de47dd1f341" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.91      0.93      0.92        67
+      user10       0.75      0.60      0.67       120
+      user11       0.55      0.83      0.66       110
+      user12       0.90      0.65      0.75        54
+      user13       0.84      0.86      0.85        65
+      user14       0.87      0.91      0.89        65
+      user15       0.77      0.87      0.81        53
+       user2       1.00      0.93      0.96        58
+       user3       0.96      0.88      0.92        59
+       user4       0.89      0.95      0.92        62
+       user5       0.90      0.80      0.85        76
+       user6       0.81      0.93      0.87        59
+       user7       0.76      0.82      0.79        65
+       user8       0.85      0.88      0.87        59
+       user9       0.73      0.53      0.61       112
+
+    accuracy                           0.80      1084
+   macro avg       0.83      0.82      0.82      1084
+weighted avg       0.81      0.80      0.80      1084
+
+Model: &quot;sequential_7&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d_6 (Conv1D)           (None, 98, 128)           2432
+
+ max_pooling1d_6 (MaxPoolin  (None, 32, 128)           0
+ g1D)
+
+ conv1d_7 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_7 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block_3 (Trans  (None, 10, 128)           297344
+ formerBlock)
+
+ global_average_pooling1d_3  (None, 128)               0
+  (GlobalAveragePooling1D)
+
+ dense_14 (Dense)            (None, 128)               16512
+
+ dropout_10 (Dropout)        (None, 128)               0
+
+ dense_15 (Dense)            (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)</code></pre><p id="d4f7c592-787e-40b3-9e9b-1685ad6d76e0" class="">에폭 하나 당 6ms로 처리</p></div></details><p id="3d134a39-888f-47c8-83e0-b3c4789a1f6d" class="">
+</p><hr id="1c9066ae-1b8e-43f6-af98-96b9797e140c"/><p id="0376c84d-0ea3-4c3a-b428-04dfb2217ab7" class="">
+</p><p id="158ca91c-9543-4b54-baf0-a274369c1821" class="">아래는 CNN+Transformer 모델 돌렸을 때의 결과</p><p id="665d66e3-976e-480e-af1c-d8ec4fc65a41" class="">
+</p><ul id="144c0c46-8ed8-4c8b-982e-1b3c642aa70b" class="toggle"><li><details open=""><summary>walk_1 </summary><figure id="bcd80529-f28d-4aa4-8e12-5bfb6727825e" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%207.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%207.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="9fa87fd5-6c9e-47ce-80a6-bda29ebb0374" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      1.00      1.00         8
+      user10       1.00      0.67      0.80         9
+      user11       0.86      1.00      0.93        19
+      user12       1.00      1.00      1.00         6
+      user13       1.00      1.00      1.00         6
+      user14       1.00      0.88      0.93         8
+      user15       1.00      1.00      1.00         6
+       user2       1.00      1.00      1.00         5
+       user3       1.00      1.00      1.00         6
+       user4       1.00      1.00      1.00         8
+       user5       1.00      1.00      1.00         6
+       user6       0.83      1.00      0.91         5
+       user7       1.00      1.00      1.00         3
+       user8       1.00      1.00      1.00         9
+       user9       0.94      0.94      0.94        17
+
+    accuracy                           0.96       121
+   macro avg       0.98      0.97      0.97       121
+weighted avg       0.96      0.96      0.96       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="6f0b1a73-e9fc-431c-a3ba-f5587e65eb4a" class="toggle"><li><details open=""><summary>walk_2</summary><figure id="6a550bba-1731-41cd-a234-c418da5cc487" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%208.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%208.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c6e7152b-6428-44b7-865d-ccf8d5261140" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.88      0.88      0.88         8
+      user10       1.00      0.78      0.88         9
+      user11       0.94      0.84      0.89        19
+      user12       1.00      1.00      1.00         6
+      user13       1.00      1.00      1.00         6
+      user14       1.00      0.88      0.93         8
+      user15       0.86      1.00      0.92         6
+       user2       1.00      1.00      1.00         5
+       user3       0.86      1.00      0.92         6
+       user4       1.00      0.75      0.86         8
+       user5       0.60      1.00      0.75         6
+       user6       1.00      1.00      1.00         5
+       user7       1.00      0.67      0.80         3
+       user8       1.00      1.00      1.00         9
+       user9       0.89      1.00      0.94        17
+
+    accuracy                           0.92       121
+   macro avg       0.94      0.92      0.92       121
+weighted avg       0.93      0.92      0.92       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)</code></pre></details></li></ul><ul id="9c8861f5-3dd6-4138-96a0-5e2d7af652ac" class="toggle"><li><details open=""><summary>walk_3</summary><figure id="ffc51fab-e284-4771-9713-1f6805af2236" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%209.png"><img style="width:679.96875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%209.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="a51e9bb2-e5c0-4309-bd6d-a58bdc5230ac" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.88      0.93         8
+      user10       1.00      1.00      1.00         9
+      user11       1.00      0.79      0.88        19
+      user12       0.86      1.00      0.92         6
+      user13       1.00      0.83      0.91         6
+      user14       1.00      1.00      1.00         8
+      user15       1.00      1.00      1.00         6
+       user2       1.00      0.80      0.89         5
+       user3       0.86      1.00      0.92         6
+       user4       0.64      0.88      0.74         8
+       user5       1.00      1.00      1.00         6
+       user6       1.00      0.80      0.89         5
+       user7       1.00      0.67      0.80         3
+       user8       0.90      1.00      0.95         9
+       user9       0.75      0.88      0.81        17
+
+    accuracy                           0.90       121
+   macro avg       0.93      0.90      0.91       121
+weighted avg       0.92      0.90      0.90       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="e3d309c5-266b-476d-b77d-a0285adc3e53" class="toggle"><li><details open=""><summary>down_1</summary><figure id="6149d8ca-6f5f-49bd-a19a-5e704d2b6037" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2010.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2010.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bcdb5eba-bdcc-40a4-ad7c-8f12772c286f" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.89      1.00      0.94         8
+      user10       0.67      0.89      0.76         9
+      user11       0.83      0.53      0.65        19
+      user12       1.00      0.83      0.91         6
+      user13       0.75      1.00      0.86         6
+      user14       1.00      0.38      0.55         8
+      user15       0.86      1.00      0.92         6
+       user2       1.00      0.60      0.75         5
+       user3       1.00      0.83      0.91         6
+       user4       0.80      1.00      0.89         8
+       user5       0.62      0.83      0.71         6
+       user6       1.00      1.00      1.00         5
+       user7       0.75      1.00      0.86         3
+       user8       0.71      0.56      0.63         9
+       user9       0.70      0.94      0.80        17
+
+    accuracy                           0.79       121
+   macro avg       0.84      0.83      0.81       121
+weighted avg       0.82      0.79      0.78       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="65b3a34b-e3fe-4d6c-956d-2cc1677ae6fd" class="toggle"><li><details open=""><summary>down_2</summary><figure id="1c84a7d5-eadc-4178-aa13-10779fefbed8" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2011.png"><img style="width:679.96875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2011.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="070812bf-b852-4dbf-aaf7-82db3678ee67" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.90      0.95        10
+      user10       0.75      0.67      0.71         9
+      user11       0.82      0.95      0.88        19
+      user12       1.00      1.00      1.00         6
+      user13       1.00      1.00      1.00         7
+      user14       1.00      1.00      1.00         9
+      user15       1.00      0.83      0.91         6
+       user2       0.90      1.00      0.95         9
+       user3       1.00      1.00      1.00         6
+       user4       1.00      1.00      1.00         7
+       user5       1.00      1.00      1.00         2
+       user6       1.00      1.00      1.00        10
+       user7       1.00      1.00      1.00         2
+       user8       1.00      1.00      1.00         6
+       user9       0.82      0.75      0.78        12
+
+    accuracy                           0.93       120
+   macro avg       0.95      0.94      0.94       120
+weighted avg       0.93      0.93      0.92       120
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="f4d1c1e4-7972-427f-9d1a-315a954893fd" class="toggle"><li><details open=""><summary>down_3</summary><figure id="7d86c2f3-1913-4763-9eec-33e502ff10ea" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2012.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2012.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="373cb452-9aec-46e8-9ce1-1217302e9734" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.88      0.93         8
+      user10       0.50      0.89      0.64         9
+      user11       1.00      0.63      0.77        19
+      user12       1.00      1.00      1.00         6
+      user13       0.86      1.00      0.92         6
+      user14       0.89      1.00      0.94         8
+      user15       1.00      0.67      0.80         6
+       user2       1.00      1.00      1.00         5
+       user3       1.00      1.00      1.00         6
+       user4       0.89      1.00      0.94         8
+       user5       0.67      1.00      0.80         6
+       user6       1.00      0.80      0.89         5
+       user7       1.00      1.00      1.00         3
+       user8       1.00      0.67      0.80         9
+       user9       0.83      0.88      0.86        17
+
+    accuracy                           0.86       121
+   macro avg       0.91      0.89      0.89       121
+weighted avg       0.90      0.86      0.86       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="91e311e1-8d4a-4a58-a2aa-033f67937e2b" class="toggle"><li><details open=""><summary>up_1</summary><figure id="fefa1dd5-e234-48ef-be0c-2b610813e070" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2013.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2013.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="bd544110-6862-432e-bef0-954b6df1cdf4" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.88      0.93         8
+      user10       0.62      0.89      0.73         9
+      user11       1.00      0.74      0.85        19
+      user12       1.00      1.00      1.00         6
+      user13       1.00      1.00      1.00         6
+      user14       1.00      1.00      1.00         8
+      user15       1.00      1.00      1.00         6
+       user2       1.00      1.00      1.00         5
+       user3       0.83      0.83      0.83         6
+       user4       1.00      1.00      1.00         8
+       user5       1.00      1.00      1.00         6
+       user6       0.83      1.00      0.91         5
+       user7       0.67      0.67      0.67         3
+       user8       0.90      1.00      0.95         9
+       user9       0.94      0.94      0.94        17
+
+    accuracy                           0.92       121
+   macro avg       0.92      0.93      0.92       121
+weighted avg       0.93      0.92      0.92       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="edbc69a3-b7eb-41ec-b5ba-e9e9d2f0cec8" class="toggle"><li><details open=""><summary>up_2</summary><figure id="92b8ec79-4947-4cbc-b58e-79899ebb029a" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2014.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2014.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c450398b-02c9-4d44-8aeb-af6831ad52b0" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.88      0.93         8
+      user10       0.88      0.78      0.82         9
+      user11       0.81      0.89      0.85        19
+      user12       1.00      0.83      0.91         6
+      user13       1.00      1.00      1.00         6
+      user14       1.00      1.00      1.00         8
+      user15       1.00      1.00      1.00         6
+       user2       0.80      0.80      0.80         5
+       user3       0.86      1.00      0.92         6
+       user4       1.00      1.00      1.00         8
+       user5       0.50      0.83      0.62         6
+       user6       0.71      1.00      0.83         5
+       user7       0.75      1.00      0.86         3
+       user8       0.83      0.56      0.67         9
+       user9       0.85      0.65      0.73        17
+
+    accuracy                           0.85       121
+   macro avg       0.87      0.88      0.86       121
+weighted avg       0.87      0.85      0.85       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="54a4e441-8ea3-450f-a652-135e185ac0bd" class="toggle"><li><details open=""><summary>up_3</summary><figure id="ab02c9da-fa44-412b-a607-b307a49c88e6" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2015.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2015.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="7fcebf4f-1e94-4c06-ac25-df2ccd9d5aae" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.88      0.93         8
+      user10       0.45      0.56      0.50         9
+      user11       0.75      0.63      0.69        19
+      user12       1.00      1.00      1.00         6
+      user13       1.00      1.00      1.00         6
+      user14       1.00      1.00      1.00         8
+      user15       1.00      1.00      1.00         6
+       user2       1.00      1.00      1.00         5
+       user3       1.00      1.00      1.00         6
+       user4       1.00      1.00      1.00         8
+       user5       1.00      1.00      1.00         6
+       user6       1.00      0.80      0.89         5
+       user7       0.75      1.00      0.86         3
+       user8       1.00      1.00      1.00         9
+       user9       0.89      1.00      0.94        17
+
+    accuracy                           0.89       121
+   macro avg       0.92      0.92      0.92       121
+weighted avg       0.90      0.89      0.89       121
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="c216b336-9c9a-4a5a-b3a8-1668d705983d" class="toggle"><li><details open=""><summary>only_walk</summary><figure id="5a914261-cfc6-4b8b-80a5-02da5ab6fe74" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2016.png"><img style="width:679.96875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2016.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="fa312883-9233-474b-98f6-0c57e1228742" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.94      0.85      0.89        20
+      user10       0.79      0.96      0.87        28
+      user11       0.93      0.88      0.90        42
+      user12       0.95      0.88      0.91        24
+      user13       0.96      1.00      0.98        23
+      user14       1.00      0.78      0.88        23
+      user15       0.64      1.00      0.78        18
+       user2       0.89      0.89      0.89        19
+       user3       0.90      0.90      0.90        21
+       user4       0.89      0.89      0.89        18
+       user5       0.92      0.96      0.94        25
+       user6       1.00      1.00      1.00        24
+       user7       0.92      0.85      0.88        26
+       user8       1.00      0.94      0.97        16
+       user9       0.97      0.86      0.91        35
+
+    accuracy                           0.91       362
+   macro avg       0.91      0.91      0.91       362
+weighted avg       0.92      0.91      0.91       362
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="04d5e0c3-fcea-4707-a018-ae8be2b8d191" class="toggle"><li><details open=""><summary>only_down</summary><figure id="2515ad3f-1d3b-4859-bf91-bd364c0b5eb9" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2017.png"><img style="width:679.96875px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2017.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c7d44f11-a702-4fd0-aa6f-c4ddf81d071e" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.90      0.82      0.86        22
+      user10       0.78      0.75      0.76        28
+      user11       0.77      0.80      0.79        41
+      user12       0.96      0.88      0.92        26
+      user13       0.86      0.86      0.86        21
+      user14       0.94      0.89      0.91        18
+      user15       0.71      0.80      0.75        15
+       user2       1.00      0.86      0.93        22
+       user3       0.94      0.94      0.94        18
+       user4       0.74      0.93      0.82        15
+       user5       0.71      0.96      0.81        23
+       user6       1.00      0.83      0.91        24
+       user7       0.95      0.95      0.95        22
+       user8       0.80      0.73      0.76        22
+       user9       0.77      0.75      0.76        44
+
+    accuracy                           0.84       361
+   macro avg       0.85      0.85      0.85       361
+weighted avg       0.85      0.84      0.84       361
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="e1bd71fe-bb1d-4bab-a70c-e6a8aed93f8f" class="toggle"><li><details open=""><summary>only_up</summary><figure id="bc125da0-51a8-4a2e-943a-f14e237b8e34" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2018.png"><img style="width:837px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2018.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="e8f4ee02-7e33-4a60-afe4-552491ba7df0" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      0.85      0.92        20
+      user10       0.50      0.86      0.63        28
+      user11       0.79      0.55      0.65        42
+      user12       0.68      0.88      0.76        24
+      user13       0.94      0.74      0.83        23
+      user14       0.81      0.96      0.88        23
+      user15       0.84      0.89      0.86        18
+       user2       1.00      0.63      0.77        19
+       user3       0.95      0.86      0.90        21
+       user4       0.90      1.00      0.95        18
+       user5       0.91      0.80      0.85        25
+       user6       1.00      0.92      0.96        24
+       user7       0.78      0.81      0.79        26
+       user8       0.82      0.88      0.85        16
+       user9       0.71      0.69      0.70        35
+
+    accuracy                           0.80       362
+   macro avg       0.84      0.82      0.82       362
+weighted avg       0.83      0.80      0.80       362
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="f0f89c26-7513-487c-b304-ea5289010e03" class="toggle"><li><details open=""><summary>only_1</summary><figure id="ff957eb9-f2b2-428f-8240-f5590cbb6493" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2019.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2019.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="398baef8-8395-4417-afa3-656d248a960b" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.86      0.90      0.88        20
+      user10       0.61      0.96      0.75        28
+      user11       0.89      0.76      0.82        42
+      user12       0.82      0.75      0.78        24
+      user13       0.95      0.87      0.91        23
+      user14       0.83      0.87      0.85        23
+      user15       0.83      0.83      0.83        18
+       user2       0.90      0.95      0.92        19
+       user3       0.74      0.95      0.83        21
+       user4       0.94      0.94      0.94        18
+       user5       0.87      0.80      0.83        25
+       user6       1.00      0.96      0.98        24
+       user7       0.80      0.77      0.78        26
+       user8       0.93      0.88      0.90        16
+       user9       0.92      0.66      0.77        35
+
+    accuracy                           0.84       362
+   macro avg       0.86      0.86      0.85       362
+weighted avg       0.86      0.84      0.84       362
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="b50f7558-eeed-4ad0-875a-e9b226440ee2" class="toggle"><li><details open=""><summary>only_2</summary><figure id="370fe9b5-af57-4103-b7cf-20e64640717b" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2020.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2020.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="865054b9-0025-4d5a-8e53-0889bfaa0465" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       0.95      0.95      0.95        22
+      user10       0.96      0.82      0.88        28
+      user11       0.82      0.88      0.85        41
+      user12       0.81      0.96      0.88        26
+      user13       0.91      1.00      0.95        21
+      user14       1.00      0.89      0.94        18
+      user15       0.92      0.73      0.81        15
+       user2       1.00      0.91      0.95        22
+       user3       1.00      1.00      1.00        18
+       user4       1.00      0.87      0.93        15
+       user5       0.92      0.96      0.94        23
+       user6       0.96      1.00      0.98        24
+       user7       0.92      1.00      0.96        22
+       user8       0.95      0.95      0.95        22
+       user9       0.84      0.82      0.83        44
+
+    accuracy                           0.91       361
+   macro avg       0.93      0.92      0.92       361
+weighted avg       0.92      0.91      0.91       361
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><ul id="b13f1745-b187-4a0b-a809-8aa31bcac30d" class="toggle"><li><details open=""><summary>only_3</summary><figure id="0afe9c97-3051-430d-ad1f-5c446b01d85c" class="image"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2021.png"><img style="width:679.984375px" src="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/image%2021.png"/></a></figure><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="c4c5df69-1bf4-47c5-83d4-2bdee963e3b1" class="code"><code class="language-Plain Text" style="white-space:pre-wrap;word-break:break-all">Classification Report - CNN+Transformer
+              precision    recall  f1-score   support
+
+       user1       1.00      1.00      1.00        20
+      user10       0.53      0.71      0.61        28
+      user11       0.72      0.62      0.67        42
+      user12       0.96      1.00      0.98        24
+      user13       0.96      0.96      0.96        23
+      user14       0.92      0.96      0.94        23
+      user15       0.84      0.89      0.86        18
+       user2       0.94      0.84      0.89        19
+       user3       0.95      1.00      0.98        21
+       user4       1.00      0.89      0.94        18
+       user5       0.96      1.00      0.98        25
+       user6       0.92      1.00      0.96        24
+       user7       0.95      0.81      0.88        26
+       user8       1.00      1.00      1.00        16
+       user9       0.91      0.83      0.87        35
+
+    accuracy                           0.88       362
+   macro avg       0.90      0.90      0.90       362
+weighted avg       0.89      0.88      0.88       362
+
+Model: &quot;sequential_1&quot;
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ conv1d (Conv1D)             (None, 98, 128)           2432
+
+ max_pooling1d (MaxPooling1  (None, 32, 128)           0
+ D)
+
+ conv1d_1 (Conv1D)           (None, 30, 128)           49280
+
+ max_pooling1d_1 (MaxPoolin  (None, 10, 128)           0
+ g1D)
+
+ transformer_block (Transfo  (None, 10, 128)           297344
+ rmerBlock)
+
+ global_average_pooling1d (  (None, 128)               0
+ GlobalAveragePooling1D)
+
+ dense_2 (Dense)             (None, 128)               16512
+
+ dropout_2 (Dropout)         (None, 128)               0
+
+ dense_3 (Dense)             (None, 15)                1935
+
+=================================================================
+Total params: 367503 (1.40 MB)
+Trainable params: 367503 (1.40 MB)
+Non-trainable params: 0 (0.00 Byte)
+_________________________________________________________________</code></pre></details></li></ul><p id="b27b9ea3-221f-4fd5-a30a-c53fedf2d888" class="">
+</p><p id="8cec4681-e04e-40c4-be8f-1fec5cf48503" class="">→ <a href="https://github.com/pobiBIG/CNN-transformer">https://github.com/pobiBIG/CNN-transformer</a></p><p id="37dbbe8d-fb05-4086-9caf-0617b678c9d2" class="">제 깃허브입니다. <strong>username, full name, or email 셋 중 하나 알려주시면 추가할게요.</strong></p><p id="98d8da03-0141-428b-90fa-a11ad82f1ec8" class="">
+</p><p id="ee2de290-a403-46c6-a1b6-f35f1f92f0e3" class="">
+</p><ul id="905eaf8a-42e3-499d-97df-a9d52e983a63" class="toggle"><li><details open=""><summary>code</summary><script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerPolicy="no-referrer"></script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" integrity="sha512-tN7Ec6zAFaVSG3TpNAKtk4DOHNpSwKHxxrsiw4GHKESGPs5njn/0sMCUMl2svV4wo4BK/rCP7juYz+zx+l6oeQ==" crossorigin="anonymous" referrerPolicy="no-referrer"/><pre id="563f45d3-3a28-4734-b071-5edfe18a28a7" class="code"><code class="language-Python"># CNN + LSTM 성능 향상
+
+import os
+import numpy as np
+import pandas as pd
+import tensorflow as tf
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import StandardScaler, LabelEncoder
+from sklearn.metrics import confusion_matrix, classification_report
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+# 데이터 경로 설정
+data_path = &quot;C:/Users/thdgm/바탕 화면/프버프로젝트/preprocessed&quot;
+
+# 데이터 로드 함수
+def load_data(data_path):
+    data = []
+    labels = []
+
+    for folder in os.listdir(data_path):
+        folder_path = os.path.join(data_path, folder)
+        if os.path.isdir(folder_path):
+            # Accelerometer와 Gyroscope 데이터를 읽음
+            acc_path = os.path.join(folder_path, &#x27;Accelerometer.csv&#x27;)
+            gyro_path = os.path.join(folder_path, &#x27;Gyroscope.csv&#x27;)
+
+            if os.path.exists(acc_path) and os.path.exists(gyro_path):
+                acc_data = pd.read_csv(acc_path)[[&#x27;x&#x27;, &#x27;y&#x27;, &#x27;z&#x27;]].values
+                gyro_data = pd.read_csv(gyro_path)[[&#x27;x&#x27;, &#x27;y&#x27;, &#x27;z&#x27;]].values
+
+                # 두 센서 데이터의 길이를 맞춤
+                min_length = min(len(acc_data), len(gyro_data))
+                acc_data = acc_data[:min_length]
+                gyro_data = gyro_data[:min_length]
+
+                # 두 데이터를 병합
+                combined_data = np.hstack((acc_data, gyro_data))
+
+                # 슬라이딩 윈도우로 샘플 생성
+                window_size = 100
+                step_size = 20  # 데이터 증강을 위해 step_size 감소
+                for start in range(0, len(combined_data) - window_size + 1, step_size):
+                    window_data = combined_data[start:start + window_size]
+                    data.append(window_data)
+                    labels.append(folder.split(&#x27;_&#x27;)[0])  # 폴더 이름으로 라벨 추출
+
+    return data, labels
+
+# 데이터 준비
+data, labels = load_data(data_path)
+
+# 데이터를 배열로 변환
+data = np.array(data)
+labels = np.array(labels)
+
+# 라벨 인코딩
+label_encoder = LabelEncoder()
+labels_encoded = label_encoder.fit_transform(labels)
+
+# 데이터를 학습용과 테스트용으로 분리
+X_train, X_test, y_train, y_test = train_test_split(data, labels_encoded, test_size=0.2, random_state=42)
+
+# 데이터 정규화
+scaler = StandardScaler()
+X_train = X_train.reshape(-1, X_train.shape[2])  # (samples, features)
+X_test = X_test.reshape(-1, X_test.shape[2])
+X_train = scaler.fit_transform(X_train).reshape(-1, 100, X_train.shape[1])  # (samples, time steps, features)
+X_test = scaler.transform(X_test).reshape(-1, 100, X_test.shape[1])
+
+# CNN + LSTM 모델 정의 (개선 버전)
+model = tf.keras.models.Sequential([
+    tf.keras.layers.Conv1D(filters=64, kernel_size=3, activation=&#x27;relu&#x27;, input_shape=(X_train.shape[1], X_train.shape[2])),
+    tf.keras.layers.BatchNormalization(),
+    tf.keras.layers.MaxPooling1D(pool_size=2),
+    tf.keras.layers.Conv1D(filters=64, kernel_size=3, activation=&#x27;relu&#x27;),
+    tf.keras.layers.BatchNormalization(),
+    tf.keras.layers.MaxPooling1D(pool_size=2),
+    tf.keras.layers.Dropout(0.2),  # 과적합 방지
+    tf.keras.layers.LSTM(64, return_sequences=False),
+    tf.keras.layers.Dense(128, activation=&#x27;relu&#x27;),
+    tf.keras.layers.Dense(len(label_encoder.classes_), activation=&#x27;softmax&#x27;)
+])
+
+# 모델 컴파일
+model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.001), 
+              loss=&#x27;sparse_categorical_crossentropy&#x27;, 
+              metrics=[&#x27;accuracy&#x27;])
+
+# 모델 학습
+history = model.fit(X_train, y_train, epochs=50, batch_size=64, validation_split=0.1)
+
+# 모델 평가
+y_pred = model.predict(X_test)
+y_pred_classes = np.argmax(y_pred, axis=1)
+
+# Confusion Matrix 시각화
+conf_matrix = confusion_matrix(y_test, y_pred_classes, normalize=&#x27;true&#x27;)
+plt.figure(figsize=(10, 8))
+sns.heatmap(conf_matrix, annot=True, cmap=&#x27;Blues&#x27;, xticklabels=label_encoder.classes_, yticklabels=label_encoder.classes_, fmt=&#x27;.2f&#x27;)
+plt.xlabel(&#x27;Predicted&#x27;)
+plt.ylabel(&#x27;True&#x27;)
+plt.title(&#x27;Confusion Matrix - Improved CNN + LSTM&#x27;)
+plt.show()
+
+# 분류 리포트 출력
+print(&quot;Classification Report - Improved CNN + LSTM&quot;)
+print(classification_report(y_test, y_pred_classes, target_names=label_encoder.classes_))
+
+# 모델 요약 출력
+model.summary()</code></pre></details></li></ul><p id="3f78b034-1b17-4816-b812-6a9ec11699a8" class="">
+</p><p id="f0f4867f-d559-45f0-91d7-28cdf19b729d" class="">
+</p><figure id="b6927011-629e-422a-af6d-bbcac19d7f43" class="link-to-page"><a href="%E1%84%87%E1%85%A1%E1%86%A8%E1%84%89%E1%85%A9%E1%86%BC%E1%84%92%E1%85%B4%2013dff1bfefa980999e17c88583155238/%E1%84%8E%E1%85%AC%E1%84%8C%E1%85%A9%E1%86%BC%20%E1%84%87%E1%85%A1%E1%86%AF%E1%84%91%E1%85%AD%20%E1%84%83%E1%85%A2%E1%84%87%E1%85%A9%E1%86%AB%20b6927011629e422aaf6dbbcac19d7f43.html">최종 발표 대본</a></figure><p id="159ff1bf-efa9-80f8-9951-f7d848fe614f" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
